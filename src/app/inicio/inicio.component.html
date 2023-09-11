@@ -1,0 +1,55 @@
+
+
+
+
+<div class="cuerpo smooth-scroll">
+  <div class="header">
+    <nav class="navbar">
+    </nav>
+  </div>
+
+
+  <div  class="hero-div d-flex flex-column justify-content-center align-items-center" >
+    <img class="perfil" src="../../assets/img//logo2.PNG" alt="perfil">
+    <div class="nombre">
+    </div>
+  </div>
+
+<section>
+  <div class="d-flex justify-content-around">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">Quiénes Somos</h5>
+        <p class="card-text">Breve descripción sobre quiénes somos y nuestra misión.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">Lo que Ofrecemos</h5>
+        <p class="card-text">Lista de servicios o productos que ofrecemos a nuestros clientes.</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="portadas-container carousel slide" data-ride="carousel">
+      <!-- Indicadores -->
+      <ol class="carousel-indicators">
+        <li data-target=".portadas-container" data-slide-to="0" class="active"></li>
+        <li data-target=".portadas-container" data-slide-to="1"></li>
+        <li data-target=".portadas-container" data-slide-to="2"></li>
+      </ol>
+      <!-- Imágenes del carrusel -->
+      <div class="carousel-inner d-flex justify-content-around mt-5">
+        <div class="carousel-item" *ngFor="let portada of portadas; let i = index" [class.active]="i === 0">
+          <img [src]="portada.imagen" alt="{{ portada.titulo }}" class="d-block w-50">
+            <h3>{{ portada.titulo }}</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</section>
+
+
+
